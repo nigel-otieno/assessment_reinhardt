@@ -1,0 +1,5 @@
+Django>=1.11.19
+django-currentuser
+arrow
+openpyxl
+git+https://github.com/cceit/reinhardt.git@0.0.1

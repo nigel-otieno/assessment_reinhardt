@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="card .mx-auto style="width: 18rem;">
+        <img src="/media/{{ post.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <small>{{post.date_added}}</small>
+            <hr>
+            <p class="card-text">{{post.body}}</p>
+            <a class="btn btn-info" href="{% url 'post_detail' post.slug %}">READ MORE</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
